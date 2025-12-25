@@ -25,7 +25,6 @@ public:
     int toInt(void) const;
 };
 
-// This must be OUTSIDE the class definition because it takes two arguments
 std::ostream& operator<<(std::ostream& os, const Fixed& f);
 
 #endif
