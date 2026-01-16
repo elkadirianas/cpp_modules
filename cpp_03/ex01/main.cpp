@@ -4,12 +4,14 @@ int main() {
     a->attack("target");
     a->takeDamage(12);
     a->beRepaired(20);
+
     delete a ; 
 
-    ClapTrap *b = new ScavTrap("robot_2");
+    ScavTrap *b = new ScavTrap("robot_2");
     b->attack("target");
     b->takeDamage(12);
     b->beRepaired(20);
+    b->guardGate();
     delete b ; 
 
     ClapTrap c = ScavTrap("robot_3");

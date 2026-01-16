@@ -3,10 +3,16 @@
 
 ScavTrap::ScavTrap(){
     std::cout << "ScavTrap Default constructed." << std::endl;
+    this->hitPoints=100 ; 
+    this->energyPoints = 50 ; 
+    this->attackDamage = 20 ; 
 }
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name){
     std::cout << "ScavTrap " << name << " constructed." << std::endl;
+    this->hitPoints=100 ; 
+    this->energyPoints = 50 ; 
+    this->attackDamage = 20 ; 
 }
 
 ScavTrap::~ScavTrap(){
@@ -21,7 +27,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap &other){
     if (this != &other) {
         ClapTrap::operator=(other);
     }
-    std::cout << "ScarvTrap Copy  " << name <<" assignment operator called." << std::endl;
+    std::cout << "ScavTrap Copy  " << name <<" assignment operator called." << std::endl;
     return *this;
 }
 
@@ -33,3 +39,8 @@ void ScavTrap::attack(const std::string& target) {
         std::cout << "ScavTrap " << name << " can't attack." << std::endl;
     }
 }
+
+
+void ScavTrap::guardGate(){
+    std::cout << "ScavTrap is now in Gate keeper mode." << std::endl;
+};
