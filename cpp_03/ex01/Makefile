@@ -1,17 +1,17 @@
-SRC = ClapTrap.cpp main.cpp
+SRC = ClapTrap.cpp main.cpp  ScavTrap.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-FALGS = -Wall -Werror -Wextra -std=c++98
+# FALGS = -Wall -Werror -Wextra -std=c++98
 
-NAME = ClapTrap
+NAME = ScavTrap
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
 	c++ $(FALGS) $(OBJ) -o $(NAME) 
 
-%.o : %.cpp ClapTrap.hpp
+%.o : %.cpp ClapTrap.hpp ScavTrap.hpp
 	c++ $(FALGS) -c $< -o $@
 
 clean :

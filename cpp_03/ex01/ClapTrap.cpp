@@ -1,19 +1,19 @@
 #include "ClapTrap.hpp"
 
 
-ClapTrap::ClapTrap() : name("whatever"), hitPoints(10), energyPoints(10), attackDamage(0) {
+ClapTrap::ClapTrap() : name("whatever"), hitPoints(100), energyPoints(50), attackDamage(20) {
     std::cout << "ClapTrap Default constructed." << std::endl;
 }
 
 
-ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0) {
+ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(100), energyPoints(50), attackDamage(20) {
     std::cout << "ClapTrap " << name << " constructed." << std::endl;
 }
 
 
 ClapTrap::ClapTrap(const ClapTrap &other) {
     *this = other;
-    std::cout << "ClapTrap Copy constructed." << std::endl;
+    std::cout << "ClapTrap " << name << " Copy constructed." << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &other) {
@@ -23,11 +23,13 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other) {
         this->energyPoints = other.energyPoints;
         this->attackDamage = other.attackDamage;
     }
+    std::cout << "ClapTrap " << name <<" Copy assignment operator called." << std::endl;
     return *this;
 }
 
 ClapTrap::~ClapTrap() {
     std::cout << "ClapTrap " << name << " destroyed." << std::endl;
+
 }
 
 void ClapTrap::attack(const std::string& target) {
