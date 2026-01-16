@@ -2,7 +2,7 @@ SRC = ClapTrap.cpp main.cpp  ScavTrap.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-# FALGS = -Wall -Werror -Wextra -std=c++98
+FALGS = -Wall -Werror -Wextra -std=c++98
 
 NAME = ScavTrap
 
