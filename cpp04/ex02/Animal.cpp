@@ -25,10 +25,6 @@ Animal::~Animal() {
     std::cout << "Animal Destructor called" << std::endl;
 }
 
-void Animal::makeSound() const {
-    std::cout << "* Generic animal noises *" << std::endl;
-}
-
 std::string Animal::getType() const {
     return this->type;
 }
