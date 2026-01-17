@@ -1,4 +1,4 @@
-SRC = Animal.cpp  Cat.cpp main.cpp Dog.cpp
+SRC = Animal.cpp  Cat.cpp main.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -11,7 +11,7 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	c++ $(FALGS) $(OBJ) -o $(NAME) 
 
-%.o : %.cpp Animal.hpp Cat.cpp Dog.hpp
+%.o : %.cpp Animal.hpp Cat.cpp Dog.hpp WrongAnimal.hpp WrongCat.hpp
 	c++ $(FALGS) -c $< -o $@
 
 clean :
