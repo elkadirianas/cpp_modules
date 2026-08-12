@@ -51,5 +51,5 @@ void identify(Base& p){
 int main(){
     Base *b = generate();
     identify(*b);
-
+    identify(b);
 }
